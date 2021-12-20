@@ -15,10 +15,10 @@ example fails if there is no existing domain.
 terrorm init
 
 # domain must already exist on account for this example.
-TF_VAR_domain=example.com terraform apply
+terraform apply -var 'domain=example.com'
 
 # wait time is configurable
-TF_VAR_domain=example.com TF_VAR_wait_for=5m terraform apply
+terraform apply -var 'domain=example.com' -var 'wait_for=5m'
 ```
 
 ## How it works
